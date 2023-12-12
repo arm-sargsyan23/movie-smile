@@ -1,0 +1,8 @@
+export {default as Header} from "./components/header/index"
+export {default as Footer} from "./components/footer/index"
+export {default as RatedMovie} from "./components/rateds-movies/rated-movie/index"
+export {default as PopularMovie} from "./components/populars-movies/popular-movie/index"
+export {default as TopMovie} from "./components/tops-movies/top-movie/index"
+export {default as SearchMovie} from "./components/search/search-movie/index"
+export {default as LocalMovie} from "./components/local-movie/index"
+export {default as Trailer} from "./components/trailer/index"
