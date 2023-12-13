@@ -21,7 +21,7 @@ function Header(){
                 <div className="flex justify-between items-center">
                     <Link to="/" className="flex space-x-1 text-2xl text-gray-100 items-end">
                         <p>MOVIE</p>
-                        <p className="text-purple-600 text-6xl">W</p>
+                        <p className="text-purple-600 text-6xl transition ease-in hover:scale-[1.2]">W</p>
                         <p>SMILE</p>
                     </Link>
                     <form 

@@ -10,7 +10,7 @@ export default function SimilarMovie({poster_path, original_title, vote_average,
                         <p>{original_title.length > 20 ? `${original_title.slice(0 , 19)}...` : original_title}</p>
                     </div>
                     <div className="30% font-bold">
-                        <p>{vote_average}</p>
+                        <p>{vote_average !== 0 ? vote_average.toFixed(1) : vote_average}</p>
                         <p>{vote_count}</p>
                     </div>
                 </div>
