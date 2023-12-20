@@ -4,7 +4,7 @@ import TopsMovies from "../../common/components/tops-movies"
 
 export default function MainPage (){
   return (
-    <main className="w-[80%] mx-auto">
+    <main className="w-[90%] mx-auto">
       <div>
         {/*Tops movies*/}
         <TopsMovies/>

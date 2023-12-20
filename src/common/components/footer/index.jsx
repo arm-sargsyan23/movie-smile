@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 
 export default function Footer (){
     return (
-        <footer className="h-[120px] w-full flex justify-center items-end">
-            <div className="w-full h-full px-20 py-8 backdrop-blur-2xl flex items-center justify-between ">
+        <footer className="absolute bottom-[-130px] left-0 right-0 h-[120px] w-full flex justify-center items-end">
+            <div className="w-full h-full px-20 py-8 backdrop-blur-2xl flex items-center justify-between flex-wrap">
                 <div className="flex space-x-4">
                     <a className="w-[30px] transition ease-in hover:scale-[1.2]" href="https://web.telegram.org/a/">
                         <img src="/media/images/telegram.png" alt="Telegram Icon" />

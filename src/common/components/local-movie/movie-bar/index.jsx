@@ -23,7 +23,7 @@ export default function MovieBar ({movieId}){
                                     {movieData.vote_average !== undefined ? <p><span className="font-bold">Rating : </span>{movieData.vote_average.toFixed(1)}</p> : null}
                                     {movieData.vote_count !== undefined ? <p><span className="font-bold">Views : </span>{movieData.vote_count !== undefined ? movieData.vote_count : null}</p> : null}
                                     {movieData.release_date !== undefined ? <p><span className="font-bold">Release : </span>{movieData.release_date}</p> : null}
-                                    {movieData.overview !== undefined ? <p><span className="font-bold">OverView : </span>{movieData.overview.length >= 30 ? `${movieData.overview.slice(0, 160)}...` : movieData.overview}</p> : null}
+                                    {movieData.overview !== undefined ? <p style={{overflow: "hidden", textOverflow: "ellipsis", display: "-webkit-box", WebkitLineClamp: "2", WebkitBoxOrient: "vertical"}}><span className="font-bold">OverView : </span>{movieData.overview}</p> : null}
                                 </div>
                                 <MovieActors movieId={movieId} />
                             </div>
