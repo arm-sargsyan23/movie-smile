@@ -1,9 +1,9 @@
-import { useRequset } from "../../../../../hooks"
+import { useRequest } from "../../../../../hooks"
 import Actor from "./actor"
 
 export default function MovieActors ({movieId}){
 
-    const movieAllActorsData = useRequset(`https://api.themoviedb.org/3/movie/${movieId}/credits?language=en-US`)
+    const movieAllActorsData = useRequest(`https://api.themoviedb.org/3/movie/${movieId}/credits?language=en-US`)
     const movieActors = movieAllActorsData.data.cast
 
     return (

@@ -1,9 +1,9 @@
-import { useRequset } from "../../../../../hooks"
+import { useRequest } from "../../../../../hooks"
 import MovieTrailer from "./movie-trailer"
 
 export default function MovieTrailerNavigate ({movieId}){
 
-    const imgagesData = useRequset(` https://api.themoviedb.org/3/movie/${movieId}/images`)
+    const imgagesData = useRequest(` https://api.themoviedb.org/3/movie/${movieId}/images`)
 
     return (
         <>

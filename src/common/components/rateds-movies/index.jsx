@@ -1,9 +1,9 @@
-import { useRequset } from "../../../hooks"
+import { useRequest } from "../../../hooks"
 import RatedMovie from "./rated-movie"
 
 export default function RatedsMovies (){
 
-    const ratedMovies = useRequset(process.env.REACT_APP_RATED_MOVIE_URL)
+    const ratedMovies = useRequest(process.env.REACT_APP_RATED_MOVIE_URL)
 
     return (
       <>

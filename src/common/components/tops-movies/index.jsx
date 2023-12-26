@@ -1,9 +1,9 @@
-import { useRequset } from "../../../hooks"
+import { useRequest } from "../../../hooks"
 import TopMovie from "./top-movie"
 
 export default function TopsMovies(){
 
-  const topMovies = useRequset(process.env.REACT_APP_TOP_MOVIE_URL)
+  const topMovies = useRequest(process.env.REACT_APP_TOP_MOVIE_URL)
 
   return (
     <>

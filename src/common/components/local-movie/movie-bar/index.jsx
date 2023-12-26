@@ -1,10 +1,10 @@
-import { useRequset } from "../../../../hooks"
+import { useRequest } from "../../../../hooks"
 import MovieActors from "./movie-actors"
 import MovieTrailerNavigate from "./movie-trailer-navigate"
 
 export default function MovieBar ({movieId}){
 
-    const movieAllData = useRequset(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`)
+    const movieAllData = useRequest(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`)
     const movieData = movieAllData.data
 
     return (
@@ -19,7 +19,7 @@ export default function MovieBar ({movieId}){
                             </div>
                             <div className="w-[65%] h-full">
                                 <div className="w-full h-[60%] px-5 text-3xl text-white space-y-5 py-5">
-                                    {movieData.original_title !== undefined ? <p><span className="font-bold">Name : </span>{movieData.original_title}</p> : null}
+                                    {movieData.original_title !== undefined ? <p style={{overflow: "hidden", textOverflow: "ellipsis", display: "-webkit-box", WebkitLineClamp: "2", WebkitBoxOrient: "vertical"}}><span className="font-bold">Name : </span>{movieData.original_title}</p> : null}
                                     {movieData.vote_average !== undefined ? <p><span className="font-bold">Rating : </span>{movieData.vote_average.toFixed(1)}</p> : null}
                                     {movieData.vote_count !== undefined ? <p><span className="font-bold">Views : </span>{movieData.vote_count !== undefined ? movieData.vote_count : null}</p> : null}
                                     {movieData.release_date !== undefined ? <p><span className="font-bold">Release : </span>{movieData.release_date}</p> : null}

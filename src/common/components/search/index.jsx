@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom"
-import { useRequset } from "../../../hooks"
+import { useRequest } from "../../../hooks"
 import SearchMovie from "./search-movie"
 
 export default function SearchMovies (){
     const {searchText} = useParams()
-    const searchMovies = useRequset(`https://api.themoviedb.org/3/search/movie?query=${searchText}&language=en-US&page=1`)
+    const searchMovies = useRequest(`https://api.themoviedb.org/3/search/movie?query=${searchText}&language=en-US&page=1`)
     return <div>
         {
             searchMovies.loading ? <div className="w-full animate-pulse h-[696px] mx-auto rounded-3xl backdrop-blur-xl"></div> : <div className="space-y-4">

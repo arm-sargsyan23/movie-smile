@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react"
 import axios from "axios"
 
-function useRequset (url){
+function useRequest (url){
     const [data, setData] = useState([])
     const [results, setResults] = useState([])
     const [loading, setLoading] = useState(true)
@@ -32,4 +32,4 @@ function useRequset (url){
 }
     
 
-export default useRequset   
+export default useRequest   

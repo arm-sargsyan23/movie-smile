@@ -1,10 +1,10 @@
-import { useRequset } from "../../../hooks"
+import { useRequest } from "../../../hooks"
 import { useParams } from "react-router-dom"
 
 export default function Trailer(){
 
     const { movieId, trailerId } = useParams()
-    const { results } = useRequset(`https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`)
+    const { results } = useRequest(`https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`)
 
     return (
         <>
